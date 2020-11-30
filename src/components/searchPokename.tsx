@@ -23,9 +23,7 @@ const SearchPokename = ({ searchFunction }: IProps) => {
 
   useEffect(() => {
     if (availablePokemons) {
-      const searchBeginsWith = new RegExp(
-        '^' + searchTerm.toLowerCase().replace(/[^a-z]/g, '')
-      );
+      const searchBeginsWith = new RegExp('^' + searchTerm.toLowerCase());
       setVisiblePokemons(
         availablePokemons.filter(
           (pokemon) =>
@@ -50,10 +48,12 @@ const SearchPokename = ({ searchFunction }: IProps) => {
         value={searchTerm}
         onKeyDown={(e) => {
           if (e.key === 'Enter' && validInput(searchTerm)) {
-            searchFunction(searchTerm);
+            searchFunction(searchTerm.toLowerCase());
           }
         }}
-        onChange={(input) => setSearchTerm(input?.target.value)}
+        onChange={(input) =>
+          setSearchTerm(input?.target.value.replace(/[^a-zA-Z]/g, ''))
+        }
       />
       <div>
         {searchTerm
