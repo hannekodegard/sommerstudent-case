@@ -1,5 +1,3 @@
-import React from 'react';
-
 const typeMapping: {
   [type: string]: { icon: string; background: string; dark?: boolean };
 } = {

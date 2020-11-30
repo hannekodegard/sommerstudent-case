@@ -1,4 +1,3 @@
-import { type } from 'os';
 import { Pokemon } from './types';
 
 export const fetchPokemon = async (pokemonName: string) =>
