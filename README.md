@@ -2,19 +2,19 @@
 
 Velkommen til Gjensidige sitt sommer-case ☀
 
-### Endringer i koden
+## Endringer i koden
 
-## Søk
+### Søk
 
 Funksjon for søk er lagt til for å kunne finne frem til flere pokemonkort. Denne tillater søk ved trykk på "enter" samt valg av foreslåtte pokemon samt returnerer hvor mange resultater som matcher søkeordet (selv om bare de første 8 vises)
 
-## Stylet pokemonkort
+### Stylet pokemonkort
 
 Det stylede pokemonkortet. Løst basert på disse pokemonkortene jeg vokste opp med på 2000-tallet:
 
 ![alt text](pokemoncard.PNG 'Title')
 
-## Lignende pokemon
+### Lignende pokemon
 
 Lagt til funksjonalitet som henter inn pokemon av samme type som pokemonen brukeren ser på.
 
