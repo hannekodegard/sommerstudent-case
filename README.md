@@ -10,7 +10,7 @@ Funksjon for søk er lagt til for å kunne finne frem til flere pokemonkort. Den
 
 ## Stylet pokemonkort
 
-Det stylede pokemonkortet. Løst basert på pokemonkortene jeg vokste opp med på 2000-tallet:
+Det stylede pokemonkortet. Løst basert på disse pokemonkortene jeg vokste opp med på 2000-tallet:
 
 ![alt text](pokemoncard.PNG 'Title')
 
