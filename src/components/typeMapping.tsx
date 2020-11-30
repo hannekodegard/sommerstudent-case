@@ -1,3 +1,5 @@
+/*contains the background image and icon assosiated with each type of pokemon*/
+
 const typeMapping: {
   [type: string]: { icon: string; background: string; dark?: boolean };
 } = {

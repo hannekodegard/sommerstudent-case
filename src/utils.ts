@@ -13,6 +13,7 @@ export const fetchPokemon = async (pokemonName: string) =>
     }
   );
 
+//Fetches all pokemon names and id's to be used for search
 export const fetchPokemons = async () =>
   fetch(`https://pokeapi.co/api/v2/pokemon?limit=2000`)
     .then((res) => {
@@ -31,6 +32,8 @@ export const fetchPokemons = async () =>
       }))
     );
 
+/*Fetches all the names of pokemon that matches the specified type. Get's the pokemons
+  ID from the URL to be used for the picture*/
 export const fetchPokemonType = async (type: string) =>
   fetch(`https://pokeapi.co/api/v2/type/${type}?limit=7`)
     .then((res) => {
@@ -49,6 +52,7 @@ export const fetchPokemonType = async (type: string) =>
       }))
     );
 
+/*Fetches a moves given power, description, type and name*/
 export const fetchAbility = async (abilityURL: string) =>
   fetch(`${abilityURL}`)
     .then((res) => {

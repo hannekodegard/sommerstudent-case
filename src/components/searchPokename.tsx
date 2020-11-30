@@ -10,6 +10,11 @@ interface IPokemon {
   id: number;
 }
 
+/*Handler for searching for pokemon. available pokemons fetches all pokemon names in the database to give suggestions while searching. 
+  visiblePokemons shows the pokemons that matches the typed searchTerm, and searchTerm works as an alternative to useRef as it's
+  being updated on change. 
+  The code contains multiple input validation checks such as replacing special characters, not allowing search for unavailable pokemon and making 
+  sure searchterms are formatted before being passed to the fetch function */
 const SearchPokename = ({ searchFunction }: IProps) => {
   const [availablePokemons, setAvailablePokemons] = useState<IPokemon[]>([]);
   const [visiblePokemons, setVisiblePokemons] = useState<IPokemon[]>([]);

@@ -7,6 +7,9 @@ interface IProps {
   type: string;
 }
 
+/*Fetches 8 similar pokemons based on the type of the chosen pokemon. Uses much of the same styling as search. 
+  If I had more time, I would have added functionality to randomize the returned data a little more*/
+
 const SimilarPokemon = ({ searchFunction, type }: IProps) => {
   const [similarPokemon, setSimilarPokemon] = useState<Pokemon[]>([]);
 

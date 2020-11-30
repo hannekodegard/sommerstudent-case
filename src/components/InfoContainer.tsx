@@ -10,9 +10,10 @@ interface moveProps {
   type: string;
 }
 
+//Maps each move to include the name, type, power (if it exists) and description (if one exists in a short format with latin letters)
 function Move({ moveURL }: { moveURL: string }) {
   const [move, setMove] = useState<moveProps>(null);
-  var english = /^[A-Za-z0-9]/;
+  var latin = /^[A-Za-z0-9]/;
 
   useEffect(() => {
     fetchAbility(moveURL)
@@ -31,7 +32,7 @@ function Move({ moveURL }: { moveURL: string }) {
         <h3>{move?.name}</h3>
         <p>{move?.power ? move.power : 20}</p>
       </div>
-      <p>{english.test(move?.description || '') ? move?.description : ''}</p>
+      <p>{latin.test(move?.description || '') ? move?.description : ''}</p>
     </div>
   );
 }
@@ -40,6 +41,7 @@ interface Props {
   pokemon?: Pokemon;
 }
 
+//The pokemoncard component. Includes mapping for background and icons based on type,
 const InfoContainer: React.FunctionComponent<Props> = ({ pokemon }) => {
   if (pokemon) {
     let pokeType = pokemon.types.map((type) => type.type.name);
@@ -53,7 +55,7 @@ const InfoContainer: React.FunctionComponent<Props> = ({ pokemon }) => {
           color: typeMapping[mainType].dark ? 'white' : 'black',
         }}
       >
-        <div className="header">
+        <div className="card-header">
           <h2>{pokemon.name}</h2>
           <div className="left-container">
             <h4>{pokemon.base_experience + ' HP'}</h4>
