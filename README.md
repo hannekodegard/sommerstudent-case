@@ -10,9 +10,7 @@ Funksjon for søk er lagt til for å kunne finne frem til flere pokemonkort. Den
 
 ### Stylet pokemonkort
 
-Det stylede pokemonkortet. Løst basert på disse pokemonkortene jeg vokste opp med på 2000-tallet:
-
-![alt text](pokemoncard.PNG 'Title')
+Det stylede pokemonkortet. Dette inneholder informasjon som navn, nivå, type, høyde, vekt, angrep, etc.
 
 ### Lignende pokemon
 
