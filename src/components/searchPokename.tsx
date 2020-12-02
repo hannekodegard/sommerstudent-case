@@ -73,6 +73,12 @@ const SearchPokename = ({ searchFunction }: IProps) => {
             <div
               className="search-result"
               onClick={() => searchFunction(pokemon.name)}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  searchFunction(pokemon.name);
+                }
+              }}
             >
               <img
                 alt={pokemon.name}
