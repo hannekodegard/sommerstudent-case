@@ -2,6 +2,8 @@
 
 Velkommen til Gjensidige sitt sommer-case ☀
 
+Hvis du ikke vil klone koden, kan produktet sees på: http://pokemoncardviewer.now.sh/h
+
 ## Endringer i koden
 
 ### Søk
